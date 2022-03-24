@@ -1,0 +1,17 @@
+{% extends layout %}
+
+{% block content %}
+<h1>Welcome to Pastie!</h1>
+<p>
+  We're a friendly paste service! All of your data is protected using
+  military-grade encryption and rock-solid security.
+</p>
+<p>
+  {% if user %}
+    Hi, <strong>{{user.username}}</strong>! Want to <a href="/paste">make a
+    new paste</a>?
+  {% else %}
+    <a href="/register">Register</a> or <a href="/login">log in</a> today!
+  {% endif %}
+</p>
+{% endblock %}

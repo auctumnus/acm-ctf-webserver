@@ -1,0 +1,26 @@
+{
+  "name": "acm-ctf-webserver",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "db": "node seedDatabase.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "NVPL",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "body-parser": "^1.19.2",
+    "cookie-parser": "^1.4.6",
+    "dotenv-defaults": "^5.0.0",
+    "express": "^4.17.3",
+    "jsonwebtoken": "^8.5.1",
+    "nanoid": "^3.3.1",
+    "nunjucks": "^3.2.3",
+    "postgres": "^1.0.2",
+    "prexit": "^1.0.0",
+    "wordlist-english": "^1.2.1"
+  }
+}

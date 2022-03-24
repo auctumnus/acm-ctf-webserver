@@ -1,0 +1,12 @@
+this contains spoilers dont read it
+
+its a paste server with a couple vulns
+
+ - you can get any file if you just `../whatever.txt`
+ - signatures are not checked in jwt
+ - also you can xss. but theres no real use for it
+ - you can also enumerate the users pretty easily. but again no real use
+ - im tempted to just sha the passwords instead of bcrypt but i dont want bad stuff to happen if
+   someone uses their real password
+ - i would let you do sql injection but its genuinely just easier with this
+   library to not. i love postgres

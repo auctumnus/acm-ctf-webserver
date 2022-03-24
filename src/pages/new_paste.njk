@@ -1,0 +1,31 @@
+{% extends layout %}
+
+{% block content %}
+<h1>Make a new paste</h1>
+<form id="new_paste" action="/paste" method="post">
+  <label>
+    Title:
+    <input name="title" required></input>
+  </label>
+  <div class="content_paste_bit">
+    <label for="pasteContent">Content:</label>
+    <textarea id="pasteContent" required name="pasteContent" form="new_paste"></textarea>
+  </div>
+  <input type="submit" value="Submit my new paste!">
+</form>
+<style>
+textarea {
+  width: 90%;
+  height: 90%;
+}
+.content_paste_bit {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+form {
+  height: 100%;
+}
+</style>
+{% endblock %}
+

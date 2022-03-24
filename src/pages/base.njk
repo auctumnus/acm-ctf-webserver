@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset='utf-8'>
+    <title>{{ [title, '| Pastie'] | join if title else "Pastie" }}</title>
+    <link rel="stylesheet" type="text/css" href="/static/index.css">
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+  </head>
+  <body>
+    <header>
+      <h1>Pastie</h1>
+      <nav>
+        <a href="/paste">New paste</a>
+        {% if user %}
+        <span>Logged in as <strong>{{user.username}}</strong></span>
+        <a href="/user">Your pastes</a>
+        <a href="/logout">Log out</a>
+        {% else %}
+        <a href="/login">Log in</a>
+        <a href="/register">Register</a>
+        {% endif %}
+      </nav>
+    </header>
+    <main>
+      {% block content %}{% endblock %}
+    </main>
+  </body>
+</html>

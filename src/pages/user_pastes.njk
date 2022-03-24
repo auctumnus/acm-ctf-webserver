@@ -1,0 +1,38 @@
+{% extends layout %}
+
+{% block content %}
+<h1>Your pastes</h1>
+
+<ol>
+{% for paste in pastes %}
+  <li><a href="{{paste.filename}}">{{paste.title}}</a></li>
+{% else %}
+  You have no pastes! Why not <a href="/paste">make one</a>?
+{% endfor %}
+</ol>
+
+{% if lastPage > 0 %}
+<nav id="user_pastes_pages">
+  <ul>
+    <li><a title="First page" href="/user?page=0">&lt;&lt;</a></li>
+    <li><a title="First page" href="/user?page={{page - 1}}">&lt;</a></li>
+    <li>Page {{page + 1}}</li>
+    <li><a title="First page" href="/user?page={{page + 1}}">&gt;</a></li>
+    <li><a title="Last page" href="/user?page={{lastPage}}">&gt;&gt;</a></li>
+  </ul>
+</nav>
+<style>
+#user_pastes_pages {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#user_pastes_pages ul {
+  display: flex;
+  list-style: none;
+  flex-direction: row;
+}
+</style>
+{% endif %}
+{% endblock %}
+

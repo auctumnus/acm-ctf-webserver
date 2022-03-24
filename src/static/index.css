@@ -1,0 +1,48 @@
+body, html, main {
+  font-family: system-ui;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+header, nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+a {
+  color: cornflowerblue;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+
+header {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid black;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  line-height: 1;
+  margin: 0;
+  margin-right: 1rem;
+}
+
+main h1 {
+  margin-bottom: 1rem;
+  font-size: large;
+}
+
+main p {
+  max-width: 70ch;
+  line-height: 1.5;
+}
+
+nav * {
+  margin-right: 1rem;
+}
